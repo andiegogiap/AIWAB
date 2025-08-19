@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Web App Builder</title>
+    <!-- WebContainer requires these headers to be set. -->
+    <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin" />
+    <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #111;
+        color: #f0f0f0;
+        background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
+        background-size: 20px 20px;
+      }
+      /* Custom neon scrollbar */
+      ::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #fff;
+        border-radius: 2px;
+        box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 8px #0ff;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #eee;
+        box-shadow: 0 0 4px #fff, 0 0 8px #fff, 0 0 12px #0ff;
+      }
+      .neon-panel {
+        background-color: rgba(20, 20, 22, 0.75);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(0, 255, 255, 0.25);
+        box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.3.1",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+    "react/jsx-runtime": "https://esm.sh/react@18.3.1/jsx-runtime",
+    "react/jsx-dev-runtime": "https://esm.sh/react@18.3.1/jsx-dev-runtime",
+    "@google/genai": "https://esm.sh/@google/genai",
+    "@monaco-editor/react": "https://esm.sh/@monaco-editor/react@4.6.0",
+    "monaco-editor": "https://esm.sh/monaco-editor@0.47.0",
+    "@babel/standalone": "https://esm.sh/@babel/standalone@7.24.0",
+    "react-dom/": "https://esm.sh/react-dom@^18.3.1/",
+    "react/": "https://esm.sh/react@^18.3.1/",
+    "marked": "https://esm.sh/marked@12.0.2"
+  }
+}
+</script>
+</head>
+  <body class="font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
