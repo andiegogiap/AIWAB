@@ -181,8 +181,8 @@ const App: React.FC = () => {
   }, [handleBottomPanelResize, stopResizing]);
 
   return (
-    <div className="flex flex-col h-screen w-screen text-white overflow-hidden p-1.5 gap-1.5">
-      <div className="flex flex-grow min-h-0 gap-1.5">
+    <div className="flex flex-col h-screen w-screen text-white overflow-hidden p-1 gap-1">
+      <div className="flex flex-grow min-h-0 gap-1">
         <div style={{ width: `${sidebarWidth}px` }} className="flex-shrink-0">
           <SideBar
             fileSystem={fileSystem}
@@ -192,7 +192,7 @@ const App: React.FC = () => {
           />
         </div>
         <ResizeHandle onMouseDown={startSidebarResize} />
-        <div className="flex flex-col flex-grow min-w-0 gap-1.5">
+        <div className="flex flex-col flex-grow min-w-0 gap-1">
             <div ref={editorPreviewContainerRef} className="flex-grow flex min-h-0 neon-panel rounded-lg overflow-hidden">
                 <div style={{ width: `${editorPaneWidth}%` }} className="flex flex-col min-w-0">
                     <div className="bg-black/30 px-3 py-1.5 border-b border-cyan-400/20 text-sm text-cyan-200 flex-shrink-0">
